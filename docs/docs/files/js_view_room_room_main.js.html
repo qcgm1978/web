@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>js\view\room\room_main.js - umweb-remote</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="umweb-remote" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/chat_panel.html">chat_panel</a></li>
+                                <li><a href="../classes/ChatScrolling.html">ChatScrolling</a></li>
+                                <li><a href="../classes/g_UserList.html">g_UserList</a></li>
+                                <li><a href="../classes/generateEmulationUserData.html">generateEmulationUserData</a></li>
+                                <li><a href="../classes/LoginWithOthers.html">LoginWithOthers</a></li>
+                                <li><a href="../classes/MarqueeScroll.html">MarqueeScroll</a></li>
+                                <li><a href="../classes/message_display.html">message_display</a></li>
+                                <li><a href="../classes/persist.html">persist</a></li>
+                                <li><a href="../classes/SendGift.html">SendGift</a></li>
+                                <li><a href="../classes/SiteCommon.html">SiteCommon</a></li>
+                                <li><a href="../classes/todoCode.html">todoCode</a></li>
+                                <li><a href="../classes/User.html">User</a></li>
+                                <li><a href="../classes/UserIdentity.html">UserIdentity</a></li>
+                                <li><a href="../classes/userPopMenuMap.html">userPopMenuMap</a></li>
+                                <li><a href="../classes/video_swf.html">video_swf</a></li>
+                                <li><a href="../classes/window.SiteCommon.html">window.SiteCommon</a></li>
+                                <li><a href="../classes/xchat_swf.html">xchat_swf</a></li>
+                                <li><a href="../classes/xMessager.html">xMessager</a></li>
+                            </ul>
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/Controller.html">Controller</a></li>
+                                <li><a href="../modules/Decorators.html">Decorators</a></li>
+                                <li><a href="../modules/Form Objects.html">Form Objects</a></li>
+                                <li><a href="../modules/Policy Objects.html">Policy Objects</a></li>
+                                <li><a href="../modules/Query Objects.html">Query Objects</a></li>
+                                <li><a href="../modules/Service Objects.html">Service Objects</a></li>
+                                <li><a href="../modules/SiteCommon.html">SiteCommon</a></li>
+                                <li><a href="../modules/Value Objects.html">Value Objects</a></li>
+                                <li><a href="../modules/View Objects.html">View Objects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: js\view\room\room_main.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * todo separate the file and the model modules would include relative class
+ * Room page module
+ *
+ * @module Service Objects
+ * @method generateEmulationUserData
+
+ */
+/**
+ * Description:
+ *
+ * @module Value Objects
+ * @class generateEmulationUserData
+ * @method generateEmulationUserData
+ */
+//todo emulating user data
+var hasUserList = false
+function generateEmulationUserData() {
+    if (hasUserList) {
+        return
+    }
+    var arr = [
+        {
+            agency: 0, badge: 0, car_id: 0, chatdisable: 0, family_name: &quot;&quot;, icon: &quot;&quot;, in_out_hint: 1, level: 1,
+            levelinroom: 1, nicegid: 150907644, nickname: &quot;游客7644&quot;, pid: 123, role: 0, room_id: 202170, roomer: 0,
+            starlevel: 0, title: 0, uid: 150907644, vip: 0, vip2: 0, watchman: 0
+        },
+        {
+            &quot;uid&quot;: 32065404, &quot;vip2&quot;: 0, &quot;level&quot;: 2, &quot;agency&quot;: 0, &quot;room_id&quot;: 202170, &quot;title&quot;: 0, &quot;levelinroom&quot;: 1,
+            &quot;watchman&quot;: 0, &quot;icon&quot;: &quot;&quot;, &quot;chatdisable&quot;: 0, &quot;roomer&quot;: 1, &quot;vip&quot;: 0, &quot;nicegid&quot;: 32065404, &quot;family_name&quot;: &quot;&quot;,
+            &quot;car_id&quot;: 0, &quot;starlevel&quot;: 0, &quot;in_out_hint&quot;: 1, &quot;badge&quot;: 0, &quot;pid&quot;: 123, &quot;role&quot;: 0, &quot;nickname&quot;: &quot;dddd333&quot;
+        },
+        {
+            &quot;nickname&quot;: &quot;wangweiwen&quot;, &quot;title&quot;: 0, &quot;levelinroom&quot;: 1, &quot;vip&quot;: &quot;6&quot;, &quot;vip2&quot;: 0, &quot;starlevel&quot;: 0,
+            &quot;in_out_hint&quot;: 1, &quot;watchman&quot;: 0, &quot;uid&quot;: 32053936, &quot;badge&quot;: 0, &quot;level&quot;: 3, &quot;nicegid&quot;: &quot;50026&quot;, &quot;roomer&quot;: 1,
+            &quot;family_name&quot;: &quot;&quot;, &quot;role&quot;: 0, &quot;chatdisable&quot;: 0, &quot;agency&quot;: 0, &quot;room_id&quot;: 202170, &quot;car_id&quot;: &quot;4&quot;, &quot;icon&quot;: &quot;&quot;,
+            &quot;pid&quot;: 122
+        },
+        {
+            &quot;uid&quot;: 32100148, &quot;level&quot;: 3, &quot;agency&quot;: 0, &quot;room_id&quot;: 202174, &quot;title&quot;: 0, &quot;levelinroom&quot;: 1, &quot;watchman&quot;: 0,
+            &quot;icon&quot;: &quot;&quot;, &quot;chatdisable&quot;: 0, &quot;roomer&quot;: 0, &quot;vip&quot;: &quot;600&quot;, &quot;nicegid&quot;: 32100148, &quot;family_name&quot;: &quot;&quot;,
+            &quot;car_id&quot;: 0, &quot;starlevel&quot;: 1, &quot;in_out_hint&quot;: 1, &quot;badge&quot;: 0, &quot;pid&quot;: 123, &quot;role&quot;: 0, &quot;nickname&quot;: &quot;五五五&quot;,
+            &quot;vip2&quot;: 0
+        },
+        {
+            &quot;uid&quot;: 32100149, &quot;level&quot;: 3, &quot;agency&quot;: 0, &quot;room_id&quot;: 202174, &quot;title&quot;: 0, &quot;levelinroom&quot;: 1, &quot;watchman&quot;: 0,
+            &quot;icon&quot;: &quot;&quot;, &quot;chatdisable&quot;: 0, &quot;roomer&quot;: 0, &quot;vip&quot;: &quot;0&quot;, &quot;nicegid&quot;: 32100148, &quot;family_name&quot;: &quot;&quot;,
+            &quot;car_id&quot;: 0, &quot;starlevel&quot;: 1, &quot;in_out_hint&quot;: 1, &quot;badge&quot;: 0, &quot;pid&quot;: 123, &quot;role&quot;: 0,
+            &quot;nickname&quot;: &quot;manager only&quot;,
+            &quot;vip2&quot;: 0
+        },
+        {
+            &quot;uid&quot;: 32100150, &quot;level&quot;: 1, &quot;agency&quot;: 0, &quot;room_id&quot;: 202174, &quot;title&quot;: 0, &quot;levelinroom&quot;: 1, &quot;watchman&quot;: 0,
+            &quot;icon&quot;: &quot;&quot;, &quot;chatdisable&quot;: 0, &quot;roomer&quot;: 0, &quot;vip&quot;: &quot;0&quot;, &quot;nicegid&quot;: 3210014, &quot;family_name&quot;: &quot;&quot;,
+            &quot;car_id&quot;: 0, &quot;starlevel&quot;: 1, &quot;in_out_hint&quot;: 1, &quot;badge&quot;: 0, &quot;pid&quot;: 123, &quot;role&quot;: 0, &quot;nickname&quot;: &quot;nice code&quot;,
+            &quot;vip2&quot;: 0
+        },
+        {
+            &quot;starlevel&quot;: 0, &quot;chatdisable&quot;: 0, &quot;level&quot;: 5, &quot;vip2&quot;: 0, &quot;family_name&quot;: &quot;&quot;, &quot;car_id&quot;: 0, &quot;levelinroom&quot;: 1,
+            &quot;vip&quot;: &quot;6&quot;, &quot;badge&quot;: 0, &quot;role&quot;: 0, &quot;in_out_hint&quot;: 1, &quot;icon&quot;: &quot;&quot;, &quot;uid&quot;: 32092862, &quot;room_id&quot;: 202170,
+            &quot;nicegid&quot;: 32092862, &quot;agency&quot;: 0, &quot;title&quot;: 0, &quot;roomer&quot;: 1, &quot;pid&quot;: 122, &quot;nickname&quot;: &quot;ceshiguanliyuan&quot;,
+            &quot;watchman&quot;: 1
+        },
+        {
+            &quot;chatdisable&quot;: 0, &quot;title&quot;: 0, &quot;icon&quot;: &quot;&quot;, &quot;vip&quot;: &quot;4&quot;, &quot;level&quot;: 2, &quot;car_id&quot;: &quot;2&quot;, &quot;levelinroom&quot;: 1,
+            &quot;room_id&quot;: 202170, &quot;uid&quot;: 32092854, &quot;badge&quot;: 0, &quot;role&quot;: 0, &quot;nicegid&quot;: &quot;50019&quot;, &quot;in_out_hint&quot;: 1,
+            &quot;roomer&quot;: 1, &quot;vip2&quot;: &quot;1&quot;, &quot;agency&quot;: 0, &quot;starlevel&quot;: 0, &quot;family_name&quot;: &quot;&quot;, &quot;nickname&quot;: &quot;一二一&quot;, &quot;watchman&quot;: 0,
+            &quot;pid&quot;: 122
+        },
+        {
+            &quot;chatdisable&quot;: 0, &quot;title&quot;: 0, &quot;levelinroom&quot;: 1, &quot;nickname&quot;: &quot;isbml1978&quot;, &quot;watchman&quot;: 0, &quot;level&quot;: 2,
+            &quot;family_name&quot;: &quot;&quot;, &quot;vip&quot;: 0, &quot;room_id&quot;: 202172, &quot;uid&quot;: 32100158, &quot;badge&quot;: 0, &quot;car_id&quot;: 0,
+            &quot;nicegid&quot;: 32100158, &quot;in_out_hint&quot;: 1, &quot;vip2&quot;: &quot;4&quot;, &quot;role&quot;: 0, &quot;starlevel&quot;: 1, &quot;roomer&quot;: 0, &quot;icon&quot;: &quot;&quot;,
+            &quot;agency&quot;: 0, &quot;pid&quot;: 122
+        }
+    ]
+    $.each(arr, function (i, param) {
+        var user = new User(param.uid, param.level, param);
+        g_UserList.UserIn(user);
+    })
+    hasUserList = true
+}
+/**
+ * Description:
+ *
+ * @module Decorators
+ * @class window.SiteCommon
+ * @extends window.SiteCommon
+ */
+$.extend(window.SiteCommon, {
+        maxBroadLen: 45,
+        EMOTION_GIF_PATH: &quot;/images/room/emotion/&quot;,
+        SWF_DIR: &#x27;/swf/&#x27;,
+        marqueeGift: null,
+        marqueeBroad: null,
+        isAjaxFailed: function (data) {
+            if (data.error != 0) {
+                $(&quot;#returnmsg&quot;).html(data.message);
+                $(&quot;#tips02&quot;).click();
+            }
+            return data.error == 1;
+        },
+        generateBroadItem: function (obj) {
+            var content = &quot;&lt;strong class=&#x27;fl&#x27;&gt;&quot; +
+                obj.name +
+                &quot;:&lt;/strong&gt;&quot; +
+                SiteCommon.decodeSign(obj)
+            var strVar = &quot;&quot;;
+            strVar += &quot;&lt;p&gt;&quot; +
+            &quot;&lt;span&gt;&quot; +
+            &quot;&lt;a href=\&quot;&quot; +
+            &quot;/&quot; +
+            obj.uid +
+            &quot;\&quot; target=\&quot;_blank\&quot; class=\&quot;spmsg_a\&quot;&gt;&quot; +
+            content +
+            &quot;&lt;/a&gt;&lt;/span&gt;&quot; +
+            &quot;&lt;/p&gt;&quot;;
+            return strVar;
+        },
+        fillAnchorArea: function (result, receiverUid) {
+            if (gift_to_uid == roompara.uid || gift_to_uid == 0 || receiverUid == roompara.uid) {
+                var s = &#x27;&#x27;;
+                if (result.glamour &gt; 0) {
+                    s = &#x27;&lt;span class=&quot;lpLevelStart&quot;&gt;&lt;i class=&quot;zhuboIco zb&#x27; + result.glamour + &#x27;&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class=&quot;lpLevelPro&quot;&gt;&lt;p class=&quot;lpLevleData&quot; &gt;还差&lt;b&gt;&#x27; + result.glamour_need + &#x27;&lt;/b&gt;U豆到&lt;/p&gt;&lt;span&gt;&lt;i style=&quot;width:&#x27; + result.glamour_need_percent + &#x27;%;&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;lpLevelEnd&quot;&gt;&lt;i class=&quot;zhuboIco zb&#x27; + result.glamour_next + &#x27;&quot;&gt;&lt;/i&gt;&lt;/span&gt;&#x27;;
+                    $(&#x27;#star_levl_next&#x27;).html(s);
+                }
+            }
+        },
+        decodeSign: function (data) {
+            var emotionGif = this.EMOTION_GIF_PATH + &quot;$1.gif&quot;;
+            var message = data.message ? data.message : data;
+            return message
+                .replace(/&amp;#47;b(\d{1,2})/g, &quot;&lt;img src=&#x27;&quot; + ImageBase + emotionGif + &quot;&#x27;&gt;&quot;)
+        },
+        encodeSpecialSign: function (msg) {
+            return msg.replace(/\/(?=\w\d{1,2})/g, &#x27;&amp;#47;&#x27;)
+        },
+        recursiveUnbind: function ($jElement) {
+            // remove this element&#x27;s and all of its children&#x27;s click events
+            $jElement.unbind();
+            $jElement.removeAttr(&#x27;onclick&#x27;);
+            $jElement.children().each(function () {
+                if ($(this).not(&#x27;:contains(&quot;充值&quot;)&#x27;)) {
+                    SiteCommon.recursiveUnbind($(this));
+                }
+            });
+        },
+        radioFn: function () {
+            $(&quot;.radioWord&quot;).toggle();
+            $(&#x27;#sperkercont&#x27;).val(&#x27;&#x27;)
+            $(&#x27;#J_broad_txt_num&#x27;).text(SiteCommon.maxBroadLen)
+        }
+    }
+);
+/**
+ * Description: query: 自己    管理员    外团巡管（目前没有）    官方巡管    普通用户    游客
+ *
+ * @module Query Objects
+ * @class UserIdentity
+ * @static
+ */
+var UserIdentity = {
+    isMe: function (data) {
+        return userpara.uid == data.uid
+    },
+    isAnchor: function (data) {
+        return data.level == 4
+    },
+    isManager: function (data) {
+        return data.level == 3;
+    },
+    isFolkWatchman: function (data) {
+        return false;
+    },
+    isWatchman: function (data) {
+        return data.level == 5;
+    },
+    isSmallConsumer: function (data) {
+        return data.level == 2;
+    },
+    isTourist: function (data) {
+        return data.level == 1;
+    }
+}
+function isTestEnvironment() {
+    return eval(localStorage.ZHL);
+}
+/**
+ * Description: program entry
+ * @module View Objects
+ * @method jquery.ready
+ */
+$(function () {
+    load_emotion();
+    load_gift_list();
+    SiteCommon.marqueeGift = new MarqueeScroll({
+        iniData: gift_message,
+        $ele: $(&#x27;#gift_message&#x27;),
+        callback: function () {
+            SiteCommon.recursiveUnbind($(&#x27;#gift_message a&#x27;).children());
+        }
+    })
+    SiteCommon.marqueeGift.iniMarquee();
+    load_room_data();
+    xchat_start();
+    var splash_base = &#x27;/room/images/&#x27;;
+    var video_swf_param = {
+        server: roompara.mserverip + &quot;:&quot; + roompara.mserverport,
+        room_id: room_id,
+        uid: userpara.gid,
+    };
+    video_start(video_swf_param, UserIdentity.isAnchor(userpara));
+    load_speak_data();
+    //load_anchor_fans();
+    load_room_bullet();
+    setTimeout(function () {
+        document.getElementById(&#x27;p1&#x27;).scrollIntoView();
+    }, 1000);
+    function load_anchor_fans() {
+        var url = &#x27;/room/fans/id/&#x27; + fansConfig;
+        $.get(url, function (result) {
+                $(&#x27;#anchor_fans&#x27;).html(result);
+            }
+        );
+    }
+});
+/**
+ * Ini video, Requiring attributes from server
+ *
+ * @method video_start
+ * @return {Undefined}
+ *
+ * @param userpara.roomer {Number}
+ * @example
+ *     0
+ * @param roompara
+ * @type {Object}
+ * @example
+ *     {&quot;server&quot;:&quot;182.18.61.9:19350&quot;,&quot;room_id&quot;:201937,&quot;uid&quot;:150858271,&quot;level&quot;:1,&quot;token&quot;:&quot;video_token&quot;,&quot;nickname&quot;:&quot;游客8271&quot;,&quot;splash&quot;:[&quot;/room/images/splash.png&quot;,&quot;/room/images/mic_free.png&quot;,&quot;/room/images/mic_chairman.png&quot;],&quot;bps&quot;:150000,&quot;vq&quot;:90}
+ * @param room_id
+ * @type {Number}
+ * @example
+ *     201855
+ * @param roompara.m_bitrate
+ * @type {Number}
+ * @example
+ *     150000
+ * @param userpara.gid
+ * @type {Number}
+ * @example
+ *     150830239
+ * @param userpara.levelinroom
+ * @type {Number}
+ * @example
+ *     1
+ * @param userpara.nickname_b64
+ * @type {String}
+ * @example
+ *     &quot;5ri45a6iMDIzOQ==&quot;
+ */
+function video_start(swfParam, isAnchor) {
+    if (isAnchor) {
+        video_swf.Init(swfParam, &quot;video_zone&quot;, 1, null);
+    }
+    else {
+        video_swf.Init(swfParam, &quot;video_zone&quot;, 0, null);
+    }
+}
+/**
+ * Description: insert flash for server side communication
+ *
+ * @xchat_start
+ */
+function xchat_start() {
+    var xconf_swf_param = {
+        ip: roompara.serverip,
+        port: roompara.serverport,
+        room_id: room_id,
+        uid: userpara.gid,
+        level: userpara.level
+    };
+    chat_panel.init();
+    if (/^游客/.test(xconf_swf_param.nickname)) {
+        xconf_swf_param.uid = 0
+    }
+    xMessager.init(xconf_swf_param);
+    xchat_swf.Init(xconf_swf_param, &#x27;xchat&#x27;, null);
+}
+function SendGiftCB(result) {
+    if (!SiteCommon.isAjaxFailed(result)) {
+        $(&#x27;#mycoin&#x27;).html(jQuery.parseJSON(result.PARAM1).coin_after);
+        SiteCommon.fillAnchorArea(result.glamour);
+        xMessager.giftmessage(result.PARAM0, JSON.parse(result.PARAM1), result.PARAM2);
+    }
+}
+function load_gift_list() {
+    var url = &#x27;/room/giftList&#x27;;
+    $.get(url, function (result) {
+            $(&#x27;#liwu&#x27;).html(result);
+            makeGitfTip();
+        }
+    );
+}
+/**
+ * Description:  to scroll the text like the old traditional marquee by jQuery plugin jQuery.Marquee
+ *
+ * @class MarqueeScroll
+ * @constructor
+ */
+function MarqueeScroll(config) {
+    var ini = {
+        maxFeed: 1,
+        callback: $.noop,
+        html: $(),
+        arr: [],
+        fullArr: [],
+        start: 0
+    };
+    $.extend(ini, config)
+    this.iniLen = 0
+    this.maxFeed = ini.maxFeed
+    this.iniData = ini.iniData
+    this.callback = ini.callback
+    this.$ele = ini.$ele
+    this.html = ini.html
+    this.arr = ini.arr
+    this.fullArr = ini.fullArr
+    this.start = ini.start
+}
+MarqueeScroll.prototype = {
+    generateMarqueHtml: function (data) {
+        var str
+        if (typeof data == &#x27;string&#x27;) {
+            str = data
+        } else {
+            var sendTime = uu89pub.getTimeSpan(uu89pub.time(data.time * 1000));
+            var anchorId = data.room_info.gid;
+            var href = roompara.uid == anchorId ? &#x27;javascript:;&#x27; : &#x27;/&#x27; + anchorId;
+            var $info = $(&#x27;&lt;a&gt;&#x27;, {
+                href: href,
+                target: &#x27;_blank&#x27;
+            }).append(sendTime + &#x27;&lt;span&gt;[&#x27; + data.room_info.room_name + &#x27;]&lt;/span&gt;&#x27; + uu89pub.getGiftEle(data))
+            str = $(&#x27;&lt;li&gt;&#x27;).width(1200).append($info).get(0).outerHTML;
+        }
+        if (this.iniLen == 0) {
+            this.iniLen = $(str).length
+        }
+        return str;
+    },
+    getLatestContents: function () {
+        var len = this.fullArr.length
+        this.end = this.start + this.maxFeed;
+        var newLen = len - (this.start + this.maxFeed)
+        if (this.maxFeed &gt; newLen) {
+            this.start = this.end - (this.maxFeed - newLen)
+        } else {
+            this.start = this.end
+        }
+        this.end = this.start + this.maxFeed;
+        var str = this.fullArr.slice(this.start, this.end).join(&#x27;&#x27;);
+        return str;
+    },
+    feedMessage: function (data) {
+        var str = this.generateMarqueHtml(data)
+        this.fullArr.push(str)
+        if (this.notHasMarqueeData()) {
+            this.$ele
+                .html(this.getLatestContents())
+            this.generateMarquee()
+        }
+    },
+    notHasMarqueeData: function () {
+        return this.iniData == &#x27;&#x27; || (this.iniData instanceof Object &amp;&amp; $.isEmptyObject(this.iniData));
+    },
+    generateMarquee: function () {
+        var that = this
+        var options = {
+            duration: 10000,
+            delayBeforeStart: 0,
+            pauseOnHover: true
+        };
+        return that.$mqMarque = this.$ele
+            .bind(&#x27;finished&#x27;, function () {
+                if (that.fullArr[that.end]) {
+                    $(this).html(that.getLatestContents())
+                    that.$mqMarque = that.$mqMarque.marquee(options)
+                    that.$ele.off(&#x27;hover&#x27;).hover(
+                        function () {
+                            $(this).marquee(&#x27;pause&#x27;)
+                        },
+                        function () {
+                            $(this).marquee(&#x27;resume&#x27;)
+                        })
+                    that.callback();
+                }
+            })
+            .marquee(options);
+    },
+    iniMarquee: function () {
+        if (this.notHasMarqueeData()) {
+            return
+        }
+        var iniData = this.generateMarqueHtml(this.iniData);
+        var arr = $.makeArray($(iniData));
+        arr = $.map(arr, function (n, i) {
+            return $(n).get(0).outerHTML
+        })
+        this.fullArr = this.fullArr.concat(arr)
+        this.$ele.html(this.getLatestContents())
+        this.generateMarquee();
+    },
+}
+/**
+ * Description: load speak data for scroll in the bottom
+ *
+ * @method load_speak_data
+ */
+function load_speak_data() {
+    var url = &#x27;/room/broadcast&#x27;;
+    $.post(url, function (result) {
+            result = $.parseJSON(result)
+            if (!SiteCommon.isAjaxFailed(result)) {
+                var iniData = &#x27;&#x27;
+                $.each($.parseJSON(result.content).reverse(), function (i, n) {
+                    var strVar = SiteCommon.generateBroadItem({
+                        name: n[0],
+                        uid: n[2],
+                        message: SiteCommon.decodeSign(n[1])
+                    });
+                    iniData += strVar
+                })
+                SiteCommon.marqueeBroad = new MarqueeScroll({
+                    maxFeed: 3,
+                    $ele: $(&#x27;#spmsg&#x27;),
+                    iniData: iniData
+                })
+                SiteCommon.marqueeBroad.iniMarquee()
+            }
+        }
+    );
+}
+function fill_gift_list(gift_list) {
+    s = &#x27;&#x27;;
+    for (var i = 0; i &lt; gift_list.length; i++) {
+        s += &#x27;&lt;li&gt;&lt;span&gt;&lt;img src=&quot;&#x27; + gift_list[i].gift_img + &#x27;&quot;&gt;&lt;/span&gt;&#x27;;
+        s += &#x27;&lt;span class=&quot;clGiftList01&quot;&gt;&#x27; + gift_list[i].gift_sum + &#x27;个&lt;/span&gt;&#x27;;
+        s += &#x27;&lt;span class=&quot;clGiftList02&quot;&gt;&#x27; + gift_list[i].from_nickname + &#x27;&lt;/span&gt;&#x27;;
+        s += &#x27;&lt;span class=&quot;clCoin&quot;&gt;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;U&#x27; + gift_list[i].total_price + &#x27;&lt;/span&gt;&lt;/li&gt;&#x27;;
+    }
+    if (s == &#x27;&#x27;) {
+        s = &#x27;&lt;li&gt;&lt;span&gt;还没有收到礼物！&lt;/span&gt;&lt;/li&gt;&#x27;;
+    }
+    $(&#x27;#clGiftList&#x27;).html(s);
+}
+/**
+ * Description: common method to construct list of today and total
+ *
+ * @method fill_fan
+ */
+function fill_fan(fans, d_id) {
+    s = &#x27;&#x27;;
+    s1 = &#x27;&#x27;;
+    for (var i = 0; i &lt; fans.length; i++) {
+        var isThree = false;
+        if (i == 0) {
+            s = &#x27;&lt;span class=&quot;lrtPic&quot;&gt;&lt;img src=&quot;&#x27; + fans[i].avatar + &#x27;&quot; alt=&quot;&quot;/&gt;&lt;i class=&quot;zzMaster&quot;&gt;&lt;/i&gt;&lt;em class=&quot;lrtTu&quot;&gt;&lt;i class=&quot;rankIco rankFirst&quot;&gt;&lt;/i&gt;&lt;/em&gt;&lt;/span&gt;&lt;strong&gt;&#x27; + fans[i].from_nickname + &#x27;&lt;/strong&gt;&lt;p&gt;&lt;b&gt;&#x27; + fans[i].total_coin + &#x27;&lt;/b&gt;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;&lt;/p&gt;&#x27;;
+            jQuery(d_id + &#x27; .lrtSecond&#x27;).html(s);
+            if (d_id == &#x27;#con_fan_1&#x27;) {
+                jQuery(&#x27;#todayfirst&#x27;).html(&#x27;&lt;strong class=&quot;ellipsis&quot;&gt;&#x27; + fans[i].from_nickname + &#x27;&lt;/strong&gt;&lt;p&gt;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;&lt;span&gt;&#x27; + fans[i].total_coin + &#x27;&lt;/span&gt;&lt;/p&gt;&#x27;);
+            } else if (d_id == &#x27;#con_fan_3&#x27;) {
+                jQuery(&#x27;#allfirst&#x27;).html(&#x27;&lt;strong class=&quot;ellipsis&quot;&gt;&#x27; + fans[i].from_nickname + &#x27;&lt;/strong&gt;&lt;p&gt;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;&lt;span&gt;&#x27; + fans[i].total_coin + &#x27;&lt;/span&gt;&lt;/p&gt;&#x27;);
+            }
+        } else if (i == 1) {
+            s = &#x27;&lt;span class=&quot;lrtPic&quot;&gt;&lt;img src=&quot;&#x27; + fans[i].avatar + &#x27;&quot; alt=&quot;&quot;/&gt;&lt;i class=&quot;zzMaster&quot;&gt;&lt;/i&gt;&lt;em class=&quot;lrtTu&quot;&gt;&lt;i class=&quot;rankIco rankSecond&quot;&gt;&lt;/i&gt;&lt;/em&gt;&lt;/span&gt;&lt;strong&gt;&#x27; + fans[i].from_nickname + &#x27;&lt;/strong&gt;&lt;p&gt;&lt;b&gt;&#x27; + fans[i].total_coin + &#x27;&lt;/b&gt;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;&lt;/p&gt;&#x27;;
+            jQuery(d_id + &#x27; .lrtFirst&#x27;).html(s);
+        } else if (i == 2) {
+            s = &#x27;&lt;span class=&quot;lrtPic&quot;&gt;&lt;img src=&quot;&#x27; + fans[i].avatar + &#x27;&quot; alt=&quot;&quot;/&gt;&lt;i class=&quot;zzMaster&quot;&gt;&lt;/i&gt;&lt;em class=&quot;lrtTu&quot;&gt;&lt;i class=&quot;rankIco rankThird&quot;&gt;&lt;/i&gt;&lt;/em&gt;&lt;/span&gt;&lt;strong&gt;&#x27; + fans[i].from_nickname + &#x27;&lt;/strong&gt;&lt;p&gt;&lt;b&gt;&#x27; + fans[i].total_coin + &#x27;&lt;/b&gt;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;&lt;/p&gt;&#x27;;
+            jQuery(d_id + &#x27; .lrtThird&#x27;).html(s);
+        } else {
+            s1 += &#x27;&lt;li&gt;&lt;span class=&quot;lrbNum&quot;&gt;&#x27; + (i + 1) + &#x27;.&lt;/span&gt;&lt;span class=&quot;lrbName&quot;&gt;&#x27; + fans[i].from_nickname + &#x27;&lt;/span&gt;&lt;span class=&quot;lrbUIco&quot;&gt;&#x27; + fans[i].total_coin + &#x27;&lt;i class=&quot;ubIco&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;&#x27;;
+        }
+        //s += &#x27;&lt;li class=&quot;f-cb&quot;&gt;&lt;span class=&quot;fl&quot;&gt;&lt;img src=&quot;/room/images/&#x27;+(i+1)+&#x27;.png&quot; alt=&quot;one&quot; /&gt;&lt;/span&gt;&lt;span class=&quot;l-pic&quot;&gt;&lt;/span&gt;&lt;span class=&quot;l-name&quot;&gt;&#x27;;
+        //if (fans[i].vip){
+        //	s += &#x27;&lt;img src=&quot;/room/images/vip/v&#x27; + fans[i].vip + &#x27;.gif&quot;&gt;&#x27;;
+        //}
+    }
+    jQuery(d_id + &#x27; .other&#x27;).html(s1);
+}
+/**
+ * Description: load data for left and right columns
+ *
+ * @method load_room_data
+ */
+function load_room_data(receiverUid) {
+    var url = &#x27;/room/data/&#x27; + room_id;
+    $.post(url, function (result) {
+        if (result.res == 0) {
+            return;
+        }
+        var result = jQuery.parseJSON(result);
+        SiteCommon.fillAnchorArea(result, receiverUid);
+        fill_fan(result.fans[0], &#x27;#con_fan_1&#x27;);
+        fill_fan(result.fans[1], &#x27;#con_fan_3&#x27;);
+        fill_gift_list(result.gift_list);
+    });
+}
+function emotion_it(i) {
+    var s = $(&quot;#message_input&quot;).val() + &quot;/b&quot; + i;
+    jQuery(&quot;#message_input&quot;).val(s);
+    jQuery(&quot;.lwfFaceList&quot;).addClass(&#x27;none&#x27;);
+}
+function emotion_it_o(i) {
+    //console.log(&#x27;emotion_it:&#x27;+i);
+    var s = $(&quot;#sperkercont&quot;).val() + &quot;/b&quot; + i;
+    jQuery(&quot;#sperkercont&quot;).val(s);
+    jQuery(&quot;.gbFaceList&quot;).hide();
+    setBroadTextarea.call($(&#x27;#sperkercont&#x27;));
+}
+function load_emotion() {
+    var s = &#x27;&#x27;;
+    var count = 60;
+    for (var i = 0; i &lt; count; i++) {
+        s += &#x27;&lt;a href=&quot;javascript:emotion_it(&#x27; + i + &#x27;)&quot;&gt;&lt;img src=&quot;/images/room/emotion/&#x27; + i + &#x27;.gif&quot; &gt;&lt;/a&gt;&#x27;;
+    }
+    jQuery(&quot;.lwfFaceList&quot;).html(s);
+    s = s.replace(/emotion_it/g, &quot;emotion_it_o&quot;)
+    jQuery(&quot;.gbFaceList&quot;).html(s);
+}
+/**
+ * Description: show cars when page loaded
+ *
+ * @owshowcar
+ * @deprecated Use chat.showCar
+ * instead
+ */
+function owshowcar() {
+    if (userpara.car_id &gt; 0) {
+        var nickname = nicknameIniVal;
+        userpara.nickname = nickname;
+        showcar(userpara);
+    }
+    /*else {
+     userpara.nickname = Base64.decode(userpara.nickname_b64);
+     member_in_out_hint(userpara, 1);
+     }*/
+}
+function showcar(appdata) {
+    var url = &#x27;/room/car/id/&#x27; + appdata.car_id;
+    $.get(url, function (result) {
+            var ms = JSON.parse(result);
+            if (ms.error == 0) {
+                appdata.carmsg = ms.content.msg;
+                member_in_out_hint(appdata, 1);
+                //message_display.pub(ms.content.msg);
+                car_center.show_car(ms.content.swf, 1, ms.content.swf_life);
+            }
+        }
+    );
+}
+function setFansVal(data) {
+    if (data.type == 1) {
+        $(&#x27;#anchor_fans&#x27;).text(data.data);
+    }
+}
+/**
+ * Description: load and render fans num on left-top about anchor info
+ *
+ * @method load_anchor_fans
+ * @deprecated Use load_room_data
+ * @since next version
+ */
+
+function followAnchor(state) {
+    if (!checklogin()) {
+        return false;
+    }
+    xchat_swf.setRoomInfo(1, state)
+}
+function delfav(roomid) {
+    jQuery.ajax({
+        type: &quot;post&quot;,
+        data: {&quot;room_id&quot;: roomid},
+        url: &quot;/room/delFav&quot;,
+        success: function (data, status) {
+            var ms = JSON.parse(data);
+            if (ms.error == 0) {
+                var str = &#x27;&lt;a href=&quot;javascript:;&quot; onclick=&quot;addfav(&#x27; + roomid + &#x27;);&quot; class=&quot;orangeBtn&quot;&gt;&lt;i&gt;添加关注&lt;/i&gt;&lt;/a&gt;&#x27;;
+                jQuery(&quot;#userfav&quot;).html(str);
+                xMessager.anchorfans();
+                setFansVal(-1);
+            }
+        }
+    });
+}
+function setFollowBtn(data) {
+    if (data.result) {
+        return
+    }
+    var $fansEle = jQuery(&quot;#userfav&quot;);
+    if (data.data == 1) {
+        var str = &#x27;&lt;a href=&quot;javascript:;&quot; onclick=&quot;followAnchor(0);&quot; class=&quot;orangeBtn&quot;&gt;&lt;i&gt;取消关注&lt;/i&gt;&lt;/a&gt;&#x27;;
+    } else {
+        var str = &#x27;&lt;a href=&quot;javascript:;&quot; onclick=&quot;followAnchor(1);&quot; class=&quot;orangeBtn&quot;&gt;&lt;i&gt;添加关注&lt;/i&gt;&lt;/a&gt;&#x27;;
+    }
+    $fansEle.html(str);
+}
+/**
+ * Loading recommended rooms if broadcast not starts, to refactor
+ * @method load_room_recommended
+ * @deprecated Use message_display.load_room_recommended
+ *
+ * */
+function load_room_recommended() {
+    var url = &quot;/room/recommend&quot;;
+    jQuery.post(url, function (result) {
+            jQuery(&quot;#room_recommended&quot;).html(result);
+        }
+    );
+}
+/**
+ * Description:
+ *
+ * @class todoCode
+ */
+/**
+ * Description: speaking event bind hidden element, not triggered now(.radioWord not displayed)
+ *
+ * @event sendspeaker
+ * @deprecated
+ *
+ */
+function sendspeaker() {
+    var msgVal = jQuery(&quot;#sperkercont&quot;).val();
+    if (msgVal.length &lt; 1) {
+        alert(&quot;喇叭必须填写内容&quot;);
+        return false;
+    }
+    //if (msgVal.length &gt; 100) {
+    //    alert(&quot;字数不能大于100&quot;);
+    //    return false;
+    //}
+    xMessager.speakermessage({
+        type: 1,
+        message: SiteCommon.encodeSpecialSign(msgVal),
+    });
+}
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

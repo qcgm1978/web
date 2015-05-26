@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        function doUpload() {
+            var theFrame = document.getElementById("uploadframe");
+            if (theFrame) {
+                theFrame = theFrame.contentWindow;
+                theFrame.selectAndUpload();
+            }
+        }
+
+        function callback(str) {
+            var theImg = document.getElementById("imgResult");
+            theImg.setAttribute("src", str);
+        }
+    </script>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div>
+        <h1>
+            Asp.net 异步上传示例</h1>
+        <iframe src="PicUpload.aspx" id="uploadframe" style="display: none;"></iframe>
+        <p>
+            <input type="button" id="btnBrowser" value="选择文件" onclick="doUpload()" />
+        </p>
+        <h2>
+            上传结果</h2>
+        <p>
+            <img alt="上传后的图片" id="imgResult" style="width: 400px" />
+        </p>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,138 @@
+@charset "utf-8";
+/*样式*/
+.remarkData span,
+.remakPerson,
+.remarkBox,
+.remarkBox,
+.remarkState,
+.girl_gb,
+.td_gb,
+.remarkIcon{background:url(img/active/active24.png) no-repeat;}
+
+.activeWrap{position:relative;z-index:9999;width:1200px;margin:0px auto;}
+.remarkData{position:absolute;left:-85px;top:165px;width:83px;}
+.remarkData span{display:block;overflow:hidden;margin-bottom:8px;height:46px;}
+.remarkData span em{display:block;overflow:hidden;height:23px;text-indent:-99999px;}
+.remarkData span b{display:block;overflow:hidden;height:20px;line-height:20px;font-weight:normal;color:#fff;font-size:15px;text-align:center;}
+.remarkData span.remarkPast{background-position:0px 0px;}
+.remarkData span.remarkNow{background-position:0px -61px;}
+
+.remakPerson1{
+	position:absolute;
+	left:590px;
+	top:260px;
+}
+.remakPerson{
+	position:static;
+	cursor:pointer;
+	width:188px;
+	height:156px;
+	background-position:0px -150px;
+	display: block;
+}
+.remarkBox1{
+	position:absolute;
+	left:510px;
+	top:54px;
+
+}
+.remarkBox{
+	position:static;
+	padding-right:5px;
+	width:454px;
+	height:310px;
+	background-position:0px -494px;
+	display: none;
+}
+.remarkPop h2{height:73px;text-indent:-99999px;}
+.remarkPop .remarkClose{cursor:pointer;position:absolute;right:3px;top:33px;width:30px;height:30px;}
+.remarkState{overflow:hidden;width:427px;height:55px;margin:0px auto;background-position:0px -400px;}
+.remarkState ol{padding-left:2px;}
+.remarkState li{
+	overflow:hidden;
+	float:left;
+	display:inline;
+	margin:3px 0px 0px;
+	width:60px;
+	height:44px;
+	text-align:center;
+}
+.remarkState_hot{
+	cursor:pointer;
+	overflow:hidden;
+	float:left;
+	display:inline;
+	margin:3px 0px 0px;
+	width:60px;
+	height:44px;
+	text-align:center;
+}
+.remarkState li b{display:block;text-align:center;height:22px;line-height:22px;font-weight:normal;}
+.remarkState li span{display:block;text-align:center;}
+.remarkState li span i{display:inline-block;width:1px;height:22px;vertical-align:middle;}
+.remarkState li span img{display:inline-block;vertical-align:middle;}
+
+.remarkIcon{
+	display:inline-block;
+	width:24px;
+	height:18px;
+	vertical-align:middle;
+}
+.duihao{background-position:0px -348px;}
+.cuohao{background-position:-36px -348px;}
+.futureIco{background-position:-70px -350px;}
+.todayIco{background:url(img/active/todayRemark.gif) no-repeat center;}
+
+/*广告*/
+.adPicture{overflow:hidden;width:420px;height:90px;margin:3px auto;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	-o-border-radius:6px;
+	border-radius:6px;
+}
+.adPicture img{display:block;width:420px;height:90px;}
+
+/*规则*/
+.remarkRule{width:420px;height:90px;margin:0px auto 5px;color:#fff;line-height:18px;font-size:12px;}
+.remarkRule h3{font-size:14px;font-weight:normal;padding:0px 0px 3px;}
+.remarkRule b{font-weight:normal;color:#FFEA01;}
+.remarkRule a,.remarkRule a:hover{color:#1BE7F2;text-decoration:underline;}
+.hong{color:#C00;}
+.lv{color:#090;}
+.hui{color:#ccc;}
+.girl_p{
+	position:absolute;
+	z-index:10;
+	width:186px;
+	height:149px;
+}
+.girl_gb{
+	position:absolute;
+	z-index:20;
+	width:15px;
+	height:15px;
+	background-position:-100px 0px;
+	margin-top: 132px;
+	margin-left: 148px;
+}
+.girl_gb:hover{
+	background-position:-120px 0px;
+}
+.girl_f{
+	position:absolute;
+	z-index:5;
+	width:186px;
+	height:149px;
+}
+
+.td_gb{
+	width:15px;
+	height:15px;
+	background-position:-200px 0px;
+	display: block;
+	margin-top: 7px;
+	margin-left: 9px;
+}
+.td_gb:hover{
+	background-position:-220px 0px;
+}

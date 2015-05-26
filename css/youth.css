@@ -1,0 +1,213 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #a96801;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    position: relative;
+}
+
+.logoa {
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 80px;
+}
+
+.mainHd {
+    height: 680px;
+    background: url(../images/special/youth/bj.png) top center;
+}
+
+.mainBd {
+    background: url(../images/special/youth/mes-bj.gif) no-repeat top center;
+}
+
+input {
+    width: 380px;
+    height: 40px;
+    border: 1px solid #a96801;
+}
+
+.sex {
+    width: 20px;
+    height: 20px;
+}
+
+.like input {
+    width: 500px;
+    height: 120px;
+}
+
+.button {
+    width: 110px;
+    height: 40px;
+    background: url(../images/special/youth/button.gif);
+    border: 0;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.sf {
+    font-size: 14px;
+}
+
+label.error {
+    font-size: 14px;
+    color: #F00;
+    bottom: auto;
+    /*background: url(/images/special/youth/x.png) no-repeat;*/
+    padding-left: 17px;
+}
+.floatxdcss {
+    width: 608px;
+    height: 468px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -300px;
+    z-index: 8888;
+    font-family: "微软雅黑";
+    background: url(../images/special/youth/tcbj.png);
+    color: #333;
+}
+
+.floatxdcss_hd {
+    width: 600px;
+    height: 30px;
+    margin-left: 4px;
+    margin-top: 1px;
+    background-color: #d11796;
+}
+
+.floatxdcss_hd_span {
+    float: left;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-left: 6px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.floatxdcss_hd_a {
+    width: 23px;
+    height: 23px;
+    float: right;
+    padding-right: 5px;
+    background: url(../images/special/youth/close.png) no-repeat;
+}
+
+.floatxdcss_hd_a:hover {
+    background: url(../images/special/youth/closeh.png) no-repeat;
+}
+
+.floatxdcss_bd {
+    width: 540px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+
+.floatxdcss_bun {
+    height: 30px;
+    width: 100%;
+}
+
+.floatxdcss_bun_a {
+    font-size: 14px;
+    color: #000;
+    width: 84px;
+    height: 30px;
+    line-height: 30px;
+    background: url(../images/special/youth/scbj.png) no-repeat;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+}
+
+.floatxdcss_bun_a:hover {
+    background: url(../images/special/youth/scbjh.png) no-repeat;
+}
+
+.floatxdcss_p {
+    font-size: 13px;
+    color: #000;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.floatxdcss_photo {
+    width: 100%;
+    height: 230px;
+}
+
+.floatxdcss_photo_big {
+    float: left;
+    height: 210px;
+    width: 280px;
+}
+
+.floatxdcss_photo_small {
+    float: left;
+    margin-left: 40px;
+    height: 150px;
+    width: 200px;
+}
+
+.floatxdcss_photo_span {
+    float: left;
+    margin-left: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.floatxdcss_button {
+    width: 100%;
+    height: 30px;
+    padding-left: 50px;
+}
+
+.floatxdcss_button_but {
+    background: url(../images/special/youth/bcbj.png) no-repeat;
+    width: 64px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.floatxdcss_button_but1 {
+    background: url(../images/special/youth/qxbj.png) no-repeat;
+    width: 64px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+.floatxdcss_button_but:hover {
+    background: url(../images/special/youth/bcbjh.png) no-repeat;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+}
+
+.floatxdcss_button_but1:hover {
+    background: url(../images/special/youth/qxbjh.png) no-repeat;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+}

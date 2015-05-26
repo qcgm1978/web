@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="E:/umei/bower_components/cropper/dist/cropper.css" rel="stylesheet">
+    <style type="text/css">
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<input type="file"/>
+
+<div><img src="" class="J_origin"></div>
+
+
+<div class="img-preview" style="width:150px; height: 150px; clear: left;"></div>
+<script src="E:\umei\js\libraries\jquery-1.11.1.js"></script>
+<script src="E:/umei/bower_components/cropper/dist/cropper.js"></script>
+<script>
+    $('input[type="file"]').change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.J_origin')
+                        .attr('src', e.target.result)
+                        .width(400)
+                        .load(function () {
+                            setCrop();
+                        })
+            };
+            reader.readAsDataURL(this.files[0]);
+        }
+    })
+    function setCrop() {
+        var $image = $('.J_origin'),
+                options = {
+                    aspectRatio: 16 / 9,
+                    preview: '.img-preview',
+                    crop: function (data) {
+                    }
+                };
+        $image.on({
+            'build.cropper': function (e) {
+                console.log(e.type);
+            },
+            'built.cropper': function (e) {
+                console.log(e.type);
+            },
+            'dragstart.cropper': function (e) {
+                console.log(e.type, e.dragType);
+            },
+            'dragmove.cropper': function (e) {
+                console.log(e.type, e.dragType);
+            },
+            'dragend.cropper': function (e) {
+                console.log(e.type, e.dragType);
+            },
+            'zoomin.cropper': function (e) {
+                console.log(e.type);
+            },
+            'zoomout.cropper': function (e) {
+                console.log(e.type);
+            }
+        }).cropper(options);
+    }
+</script>
+</body>
+</html>

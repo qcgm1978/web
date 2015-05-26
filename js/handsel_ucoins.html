@@ -1,0 +1,87 @@
+<style>
+    .float001 {
+        position: fixed;
+        left: 50%;
+        margin-left: -217px;
+        top: 200px;
+        z-index: 8888;
+        font-family: "微软雅黑";
+    }
+
+    .float001_p {
+        font-size: 20px;
+        display: block;
+        color: #DF5729;
+        position: absolute;
+        z-index: 99999;
+        bottom: 55px;
+        left: 46%;
+        margin-left: -33%;
+        width: 280px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+    }
+
+    a.dls:link {
+        font-size: 18px;
+        display: block;
+        color: #DF5729;
+        position: absolute;
+        z-index: 99999;
+        bottom: 20px;
+        left: 50%;
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #EFFF00;
+        margin-left: -80px;
+        border-radius: 8px;
+        box-shadow: 0 4px 0 #FFB300;
+        text-decoration: none;
+    }
+
+    .float001_close {
+        position: absolute;
+        top: 60px;
+        left: 320px;
+        cursor: pointer;
+    }
+</style>
+<div class="float001">
+    <img src="/images/ads/give-coins/aa.png" alt=""/>
+
+    <p class="float001_p" style="margin-bottom: 20px;">恭喜您，获得10U币奖励！</p>
+    <a href="javascript:" class="dls J_receive">领 取</a>
+
+    <div class="float001_close"><img src="/images/ads/give-coins/close.png"/></div>
+</div>
+<script>
+    function removePrompt() {
+        $('.J_give_coins').remove()
+    }
+    $('.float001_close img').click(function () {
+        removePrompt();
+    })
+    $('.J_receive').click(function () {
+        $
+                .post('/user/getLoginGift')
+                .success(function (data) {
+                    data = $.parseJSON(data);
+                    if (!SiteCommon.isAjaxFailed(data)) {
+                        SiteCommon.promptInfo(data.message)
+                        removePrompt();
+                        $('body').click(function () {
+                            location.reload()
+                        })
+                    }
+                })
+                .error(function () {
+                    alert("error");
+                })
+                .complete(function () {
+                });
+    })
+</script>

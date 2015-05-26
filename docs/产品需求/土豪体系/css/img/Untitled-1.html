@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script> 
+function EnterPress(e){ //传入 event 
+var e = e || window.event; 
+if(e.keyCode == 13){ 
+} 
+} 
+</script> 
+</head>
+
+<body>
+<form name="Form1" method="">
+用户名:<INPUT TYPE=text SIZE=20 maxlength = 8 onkeydown=KeyDown()>
+密码:<INPUT TYPE=password SIZE=20 maxlength = 8 onkeydown=KeyDown()>
+<input type="submit" name="btnsubmit" value="提交"  onClick="alert('调用成功！')">
+</form>
+</body>
+</html>
